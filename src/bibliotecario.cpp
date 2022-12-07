@@ -29,7 +29,7 @@ int Bibliotecario::exibeMenu() override{
 		std::cout<<std::endl<<menu<<std::endl;
 		std::cin>>op;
 		if(op == 10){
-			
+			return 1;
 		}else if(op == 11){
 			login = false;
 		}else{
