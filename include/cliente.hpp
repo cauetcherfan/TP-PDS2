@@ -44,45 +44,11 @@ Class Cliente : public Usuario
     /**
      * @brief Construct a new Cliente object
      * 
-     */
-        Cliente();
-
-    /**
-     * @brief Construct a new Cliente object
-     * 
-     * @param usuario 
-     */
-        Cliente(Usuario *usuario);
-
-    /**
-     * @brief Construct a new Cliente object
-     * 
-     * @param LogarComoAdmin 
      * @param nome 
-     * @param senha 
-     * @param email 
-     * @param telefone 
-     */
-        Cliente(bool LogarComoAdmin, string nome, string senha, string email, string telefone);
-
-    /**
-     * @brief Construct a new Cliente object
-     * 
-     * @param nome 
-     * @param senha 
      * @param email 
      * @param telefone 
      */
         Cliente(string nome, string senha, string email, string telefone);
-
-    /**
-     * @brief Construct a new Cliente object
-     * 
-     * @param nome 
-     * @param email 
-     * @param telefone 
-     */
-        Cliente(string nome, string email, string telefone);
 
     //Algumas das funções que nem vamos usar eu deixei sem parâmetro, mas se precisarmos usar de alguma forma, só implementar;
 
@@ -104,13 +70,6 @@ Class Cliente : public Usuario
      * @return * void 
      */
         void pagarMulta();
-
-    /**
-     * @brief 
-     * 
-     * @return list<Cliente> 
-     */
-        list<Cliente> pesquisarReserva();
 
     /**
      * @brief Get the Id Cliente object
@@ -158,7 +117,7 @@ Class Cliente : public Usuario
      * @brief Destroy the Cliente object
      * 
      */
-        virtual ~Cliente() = default;
+    ~Cliente();
 };
 
 #endif
