@@ -1,4 +1,5 @@
 #include "bibliotecario.hpp"
+#include <iostream>
 #include <string>
 
 Bibliotecario::Bibliotecario(std::string n, std::string s, std::string e, std::string t):
@@ -7,7 +8,20 @@ Bibliotecario::Bibliotecario(std::string n, std::string s, std::string e, std::s
 ~Bibliotecario(){}
 
 int Bibliotecario::exibeMenu() override{
+    std::string menu =
+		"1 - Pesquisar livro pelo nome \n"
+		"2 - Pesquisar livro pelo autor \n"
+		"3 - Pesquisar livro pelo assunto \n"
+		"4 - Emprestar livro \n"
+		"5 - Cadastrar livro \n"
+		"6 - Cadastrar prateleira \n"
+		"7 - Cadastrar estante \n"
+		"8 - Cadastrar cliente \n"
+		"9 - Ver perfil \n"
+		"10 - Logoff \n"
+		"11 - Sair \n";
 
+    std::cout<<std::endl<<menu<<std::endl;
 }
 
 void verPerfil(){
@@ -37,5 +51,6 @@ void Bibliotecario::cadastrarEstante(int id, std::string assunto){}
 
 void Bibliotecario::cadastrarCliente(string nome, string senha, string email, string telefone){}
 
-// 		"11 - Logoff \n"
-// 		"12 - Sair \n";
+void Bibliotecario::logoff(){}
+
+void Bibliotecario::sair(){}
