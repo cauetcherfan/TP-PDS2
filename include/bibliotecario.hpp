@@ -75,10 +75,6 @@ class Bibliotecario : public Usuario {
 
     void pesquisarLivroAssunto(std::string assunto);
 
-    void logoff();
-
-    void sair();
-
 	/**
 	 * @brief  Função que exibe o menu do bibliotecário,
 	 * @details Reescrita do método exibeMenu() do Usuario para exibir o menu do Bibliotecário.

@@ -27,6 +27,7 @@ bool Bibliotecario::exibeMenu() override{
 
     do{
 		std::cout<<std::endl<<menu<<std::endl;
+		std::cout<<"Digite a opção desejada"<<std::endl;
 		std::cin>>op;
 		if(op == 10){
 			return false;
@@ -64,7 +65,3 @@ void Bibliotecario::cadastrarPrateleira(int id, int idEstante, std::string assun
 void Bibliotecario::cadastrarEstante(int id, std::string assunto){}
 
 void Bibliotecario::cadastrarCliente(string nome, string senha, string email, string telefone){}
-
-void Bibliotecario::logoff(){}
-
-void Bibliotecario::sair(){}
