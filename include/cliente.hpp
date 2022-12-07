@@ -152,7 +152,7 @@ Class Cliente : public Usuario
      * 
      * @return int 
      */
-        virtual int exibeMenu() const override;
+        virtual bool exibeMenu() const override;
 
     /**
      * @brief Destroy the Cliente object

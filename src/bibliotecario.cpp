@@ -7,7 +7,7 @@ Bibliotecario::Bibliotecario(std::string n, std::string s, std::string e, std::s
 
 ~Bibliotecario(){}
 
-int Bibliotecario::exibeMenu() override{
+bool Bibliotecario::exibeMenu() override{
 
 	bool login = true;
 	int op;
@@ -29,7 +29,7 @@ int Bibliotecario::exibeMenu() override{
 		std::cout<<std::endl<<menu<<std::endl;
 		std::cin>>op;
 		if(op == 10){
-			return 1;
+			return false;
 		}else if(op == 11){
 			login = false;
 		}else{

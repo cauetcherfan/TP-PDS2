@@ -86,7 +86,7 @@ class Bibliotecario : public Usuario {
 	 *
 	 * @return int
 	 */
-	virtual int exibeMenu() override;
+	virtual bool exibeMenu() override;
 
 	/**
 	 * @brief Destrói o objeto Bibliotecário

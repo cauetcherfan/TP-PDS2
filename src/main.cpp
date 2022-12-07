@@ -13,7 +13,7 @@ int main (){
 
     bool erroLogin = true;
 
-    int rodar;
+    bool rodar = true;
     do{
         do{
             std::cout<<"Seja bem vindo(a) à Biblioteca Central"<<std::endl;
@@ -34,7 +34,7 @@ int main (){
                 std::cout<<std::endl<<"Login inválido! Tente novamente";
             }
         }while(erroLogin);
-    }
+    }while(rodar);
 
 
     // int rodando = 1;
