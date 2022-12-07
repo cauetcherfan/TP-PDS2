@@ -8,6 +8,10 @@ Bibliotecario::Bibliotecario(std::string n, std::string s, std::string e, std::s
 ~Bibliotecario(){}
 
 int Bibliotecario::exibeMenu() override{
+
+	bool login = true;
+	int op;
+
     std::string menu =
 		"1 - Pesquisar livro pelo nome \n"
 		"2 - Pesquisar livro pelo autor \n"
@@ -21,7 +25,17 @@ int Bibliotecario::exibeMenu() override{
 		"10 - Logoff \n"
 		"11 - Sair \n";
 
-    std::cout<<std::endl<<menu<<std::endl;
+    do{
+		std::cout<<std::endl<<menu<<std::endl;
+		std::cin>>op;
+		if(op == 10){
+			
+		}else if(op == 11){
+			login = false;
+		}else{
+			continue;
+		}
+	}while(login);
 }
 
 void verPerfil(){
