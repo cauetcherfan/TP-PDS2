@@ -1,41 +1,41 @@
 #include "bibliotecario.hpp"
-
-Bibliotecario::Bibliotecario(){}
+#include <string>
 
 Bibliotecario::Bibliotecario(std::string n, std::string s, std::string e, std::string t):
     nome(n), senha(s), email(e), telefone(t) {}
 
-virtual ~Bibliotecario() = default;
+~Bibliotecario(){}
 
 int Bibliotecario::exibeMenu() override{
 
 }
 
+void verPerfil(){
+    std::string presentation = "";
+    presentation += "Olá! Eu sou o/a bibliotecário(a) " + nome;
+    std::cout<<presentation<<std::endl;
+    std::cout<<"Dados para contato:"<<std::endl;
+    std::cout<<"Meu email é "<< email<< std::endl;
+    std::cout<<"Meu telefone é "<<telefone<<std::endl;
+}
 
 //funções vazias
 
-void Bibliotecario::pesquisarLivroNome(Cliente *cliente, Livro *livro){}
+void Bibliotecario::pesquisarLivroNome(std::string nome){}
 
-void Bibliotecario::pesquisarLivroAutor(Cliente *cliente, Livro *livro){}
+void Bibliotecario::pesquisarLivroAutor(std::string autor){}
 
-void Bibliotecario::pesquisarLivroAssunto(Cliente *cliente, Livro *livro){}
+void Bibliotecario::pesquisarLivroAssunto(std::string assunto){}
 
 void Bibliotecario::emprestarLivro(Cliente *cliente, Livro *livro){}
 
-void Bibliotecario::cadastrarLivro(Bibliotecario *b){}
+void Bibliotecario::cadastrarLivro(int id, std::string nome, std::string autor, std::string assunto){}
 
-void Bibliotecario::cadastrarPrateleira(Bibliotecario *b){}
+void Bibliotecario::cadastrarPrateleira(int id, int idEstante, std::string assunto){}
 
-void Bibliotecario::cadastrarEstante(){}
+void Bibliotecario::cadastrarEstante(int id, std::string assunto){}
 
-void Bibliotecario::cadastrarCliente(){}
+void Bibliotecario::cadastrarCliente(string nome, string senha, string email, string telefone){}
 
-std::list<Cliente> Bibliotecario::pesquisarReserva(Livro livro){}
-
-int Bibliotecario::buscaEstanteIDnobanco(std::string categoria){}
-
-Prateleira Bibliotecario::buscaPrateleiranobanco(std::string assunto){}
-
-// 		"10 - Ver perfil \n"
 // 		"11 - Logoff \n"
 // 		"12 - Sair \n";

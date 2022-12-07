@@ -7,7 +7,7 @@
  * @file bibliotecario.hpp
  * @author Matheus 
  * @brief Armazena as caracteristicas do Bibliotecário
- * @version 1.0
+ * @version 2.0
  * @date 07-12-2022
  * @details O Bibliotecario é o administrador do sistema.
  * Ele pode realizar todas as pesquisas que Cliente faz,
@@ -17,16 +17,11 @@
  */
 
 /**
- * @brief Classe Bibliotecário,
+ * @brief Classe Bibliotecario,
  * @details Atributos e métodos de Bibliotecário.
  */
 class Bibliotecario : public Usuario {
   public:
-	/**
-	 * @brief Construtor da classe bibliotecário,
-	 * @details Constrói um novo objeto Bibliotecario sem inicializar nenhum atributo
-	 */
-	Bibliotecario();
 
 	/**
 	 * @brief Construtor da classe bibliotecário,
@@ -37,6 +32,8 @@ class Bibliotecario : public Usuario {
 	 * @param telefone
 	 */
 	Bibliotecario(std::string nome, std::string senha, std::string email, std::string telefone);
+
+    void verPerfil();
 
 	/**
 	 * @brief  Função que realiza o empréstimo de livros,
@@ -51,57 +48,32 @@ class Bibliotecario : public Usuario {
 	 * @details Cadastra um novo livro no banco de dados. Recebe como parâmetro o Bibliotecário que fará o cadastro.
 	 * @param b
 	 */
-	void cadastrarLivro(Bibliotecario *b);
+	void cadastrarLivro(int id, std::string nome, std::string autor, std::string assunto);
 
 	/**
 	 * @brief Função que cadastra prateleiras,
 	 * @details Cadastra uma nova prateleira no banco de dados. Recebe como parâmetro o Bibliotecário que fará o cadastro.
 	 * @param b
 	 */
-	void cadastrarPrateleira(Bibliotecario *b);
+	void cadastrarPrateleira(int id, int idEstante, std::string assunto);
 
 	/**
 	 * @brief Função que cadastra uma nova estante,
 	 * @details Cadastra uma nova estante no banco de dados utilizado.
 	 */
-	void cadastrarEstante();
+	void cadastrarEstante(int id, std::string assunto);
 
 	/**
 	 * @brief Função que cadastra um novo cliente,
 	 * @details Cadastra um novo cliente no banco de dados utilizado.
 	 */
-	void cadastrarCliente();
+	void cadastrarCliente(string nome, string senha, string email, string telefone);
 
-	/**
-	 * @brief Realiza a pesquisa no banco de dados sobre as reservas de um determinado livro e retorna a lista uma lista de clientes
-	 *@details A lista de reserva funciona como uma fila, o primeiro cliente é, de fato, com quem está o livro.
-				O segundo cliente pegará o livro assim que o primeiro devolver o livro para a biblioteca.
-	 * @param livro
-	 * @return std::list<Cliente>
-	 */
-	std::list<Cliente> pesquisarReserva(Livro livro);
+    void pesquisarLivroNome(std::string nome);
 
-	/**
-	 * @brief Função que busca o ID da estante da respectiva categoria, 
-	 * @details Busca, no banco de dados, o ID da estante que possui a categoria recebida como parâmetro.
-	 * @param categoria
-	 * @return int
-	 */
-	int buscaEstanteIDnobanco(std::string categoria);
+    void pesquisarLivroAutor(std::string autor);
 
-	/**
-	 * @brief Função que busca uma prateleira com assunto específico,
-	 * @details Busca, no banco de dados, um objeto Prateleira que possui o assunto recebido como parâmetro.
-	 * @param assunto
-	 * @return Prateleira
-	 */
-	Prateleira buscaPrateleiranobanco(std::string assunto);
-
-    void pesquisarLivroNome(Cliente *cliente, Livro *livro);
-
-    void pesquisarLivroAutor(Cliente *cliente, Livro *livro);
-
-    void pesquisarLivroAssunto(Cliente *cliente, Livro *livro);
+    void pesquisarLivroAssunto(std::string assunto);
 
 	/**
 	 * @brief  Função que exibe o menu do bibliotecário,
@@ -117,35 +89,7 @@ class Bibliotecario : public Usuario {
 	 * @details Destrói a classe Bibliotecário instanciada.
 	 *
 	 */
-	virtual ~Bibliotecario() = default;
+	~Bibliotecario();
 };
 
 #endif
-
-/*
-int Bibliotecario::exibeMenu() const {
-	std::string textoMenuBibliotecario =
-		"1 - Pesquisar livro pelo nome \n"
-		"2 - Pesquisar livro pelo autor \n"
-		"3 - Pesquisar livro pelo assunto \n"
-		"4 - Pesquisar reservas de livros \n"
-		"5 - Emprestar livro \n"
-		"6 - Cadastrar livro \n"
-		"7 - Cadastrar prateleira \n"
-		"8 - Cadastrar estante \n"
-		"9 - Cadastrar cliente \n"
-		"10 - Ver perfil \n"
-		"11 - Logoff \n"
-		"12 - Sair \n";
-
-	int opcao;
-
-	std::cout << textoMenuBibliotecario << std::endl;
-
-	std::cout << "Digite a opcao escolhida: ";
-
-	std::cin >> opcao;
-
-	return opcao;
-}
-*/
