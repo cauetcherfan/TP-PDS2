@@ -3,60 +3,200 @@
 #include <list>
 #include <string>
 
+/**
+ * @file usuarios.hpp
+ * @author Marcelle
+ * @brief Armazena as caracteristicas do Usuário
+ * @version 1.0
+ * @date 07-12-2022
+ * @details 
+ * @copyright GNU General Public License v2.0.
+ */
+
+/**
+ * @brief 
+ * 
+ */
 class Usuario {
   protected:
 	
-	bool LogarComoAdmin;
+	/**
+	 * @brief 
+	 * 
+	 */
+		bool LogarComoAdmin;
 
-	std::string nome;
+	/**
+	 * @brief 
+	 * 
+	 */
+		std::string nome;
 
-	std::string senha;
+	/**
+	 * @brief 
+	 * 
+	 */
+		std::string senha;
 
-	std::string email;
+	/**
+	 * @brief 
+	 * 
+	 */
+		std::string email;
 
-	std::string telefone;
+	/**
+	 * @brief 
+	 * 
+	 */
+		std::string telefone;
 
   public:
 
-	Usuario();
+	/**
+	 * @brief Construct a new Usuario object
+	 * 
+	 */
+		Usuario();
 
-	Usuario(std::string nome, std::string email, std::string telefone);
+	/**
+	 * @brief Construct a new Usuario object
+	 * 
+	 * @param nome 
+	 * @param email 
+	 * @param telefone 
+	 */
+		Usuario(std::string nome, std::string email, std::string telefone);
 
-	Livro pesquisarLivroPorNome(std::string nomedoLivro);
+	/**
+	 * @brief 
+	 * 
+	 * @param nomedoLivro 
+	 * @return Livro 
+	 */
+		Livro pesquisarLivroPorNome(std::string nomedoLivro);
 
-	std::list<Livro> pesquisarLivroPorAutor(std::string nomedoAutor);
+	/**
+	 * @brief 
+	 * 
+	 * @param nomedoAutor 
+	 * @return std::list<Livro> 
+	 */
+		std::list<Livro> pesquisarLivroPorAutor(std::string nomedoAutor);
 
-	std::list<Livro> pesquisarLivroPorAssunto(std::string assunto);
+	/**
+	 * @brief 
+	 * 
+	 * @param assunto 
+	 * @return std::list<Livro> 
+	 */
+		std::list<Livro> pesquisarLivroPorAssunto(std::string assunto);
 
-	 void cadastrarCliente(Cliente cliente);
+	/**
+	 * @brief 
+	 * 
+	 * @param cliente 
+	 */
+		void cadastrarCliente(Cliente cliente);
 
-	 virtual std::list<Cliente> pesquisarReserva(Livro livroParaReserva) = 0;
+	/**
+	 * @brief 
+	 * 
+	 * @param livroParaReserva 
+	 * @return std::list<Cliente> 
+	 */
+		virtual std::list<Cliente> pesquisarReserva(Livro livroParaReserva) = 0;
 
-	void setId(int id);
+	/**
+	 * @brief Set the Id object
+	 * 
+	 * @param id 
+	 */
+		void setId(int id);
 
-	void setLogarComoAdmin(bool LogarComoAdmin);
+	/**
+	 * @brief Set the Logar Como Admin object
+	 * 
+	 * @param LogarComoAdmin 
+	 */
+		void setLogarComoAdmin(bool LogarComoAdmin);
 
-	void setNome(std::string nome);
+	/**
+	 * @brief Set the Nome object
+	 * 
+	 * @param nome 
+	 */
+		void setNome(std::string nome);
 
-	void setSenha(std::string senha);
+	/**
+	 * @brief Set the Senha object
+	 * 
+	 * @param senha 
+	 */
+		void setSenha(std::string senha);
 
-	void setEmail(std::string email);
+	/**
+	 * @brief Set the Email object
+	 * 
+	 * @param email 
+	 */
+		void setEmail(std::string email);
 
-	void setTelefone(std::string telefone);
+	/**
+	 * @brief Set the Telefone object
+	 * 
+	 * @param telefone 
+	 */
+		void setTelefone(std::string telefone);
 
-	int getId();
+	/**
+	 * @brief Get the Id object
+	 * 
+	 * @return int 
+	 */
+		int getId();
 
-	bool getLogarComoAdmin();
+	/**
+	 * @brief Get the Logar Como Admin object
+	 * 
+	 * @return true 
+	 * @return false 
+	 */
+		bool getLogarComoAdmin();
 
-	std::string getNome();
+	/**
+	 * @brief Get the Nome object
+	 * 
+	 * @return std::string 
+	 */
+		std::string getNome();
 
-	std::string getSenha();
+	/**
+	 * @brief Get the Senha object
+	 * 
+	 * @return std::string 
+	 */
+		std::string getSenha();
 
-	std::string getEmail();
+	/**
+	 * @brief Get the Email object
+	 * 
+	 * @return std::string 
+	 */
+		std::string getEmail();
 
-	std::string getTelefone();
+	/**
+	 * @brief Get the Telefone object
+	 * 
+	 * @return std::string 
+	 */
+		std::string getTelefone();
 
-	virtual int ImprimirMenu() const;
+	/**
+	 * @brief 
+	 * 
+	 * @return int 
+	 */
+		virtual int ImprimirMenu() const;
 };
 
 
