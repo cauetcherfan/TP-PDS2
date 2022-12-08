@@ -15,9 +15,6 @@ int Usuario::exibeMenu() const {
 }
 
 
-bool Usuario::LogarComoAdmin() {
-	return _LogarComoAdmin;
-}
 
 std::string Usuario::getNome() {
 	
@@ -35,8 +32,6 @@ std::string Usuario::getEmail() {
 std::string Usuario::getTelefone() {
 	return _telefone;
 
-void Usuario::setLogarComoAdmin(bool LogarComoAdmin) {
-	_LogarComoAdmin = LogarComoAdmin;
 }
 
 void Usuario::setNome(std::string nome) {
