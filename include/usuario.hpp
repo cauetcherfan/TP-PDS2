@@ -53,7 +53,7 @@ class Usuario {
 		 * 
 		 */
 			
-			bool _LogarComoAdmin;
+			
 
 	public:
 
@@ -66,36 +66,9 @@ class Usuario {
 		 */
 		Usuario(std::string nome, std::string senha, std::string email, std::string telefone);
 
-		/**
-		 * @brief 
-		 * 
-		 * @param nomedoLivro 
-		 * @return Livro 
-		 */
-			Livro pesquisarLivroPorNome(std::string nomedoLivro);
-
-		/**
-		 * @brief 
-		 * 
-		 * @param nomedoAutor 
-		 * @return std::list<Livro> 
-		 */
-			std::list<Livro> pesquisarLivroPorAutor(std::string nomedoAutor);
-
-		/**
-		 * @brief 
-		 * 
-		 * @param assunto 
-		 * @return std::list<Livro> 
-		 */
-			std::list<Livro> pesquisarLivroPorAssunto(std::string assunto);
-
+		
 			
-		/**
-		 * @brief determina o acesso as funçoes de cadastro ao usuario que esta logando
-		 * @param LogarComoAdmin
-		 */
-		void setLogarComoAdmin(bool LogarComoAdmin);
+	
 		/**
 		 * @brief Set the Nome object
 		 * 
@@ -145,15 +118,7 @@ class Usuario {
 		 * @return std::string 
 		 */
 			std::string getEmail();
-		/**
-		 * @brief Retorna a permissão ao acesso de funçoes exclusivas do bibliotecario
-		 * 			0 -> Cliente
-		 * 			1 -> Bibliotecario
-		 *
-		 * @return 0
-	 	* @return 1
-		 */
-		bool getLogarComoAdmin();
+		
 	
 
 		/**
