@@ -67,7 +67,7 @@ class Cliente : public Usuario{
 	    * @brief 
 	    * @details
 	    */
-		void verPerfil();
+		virtual void verPerfil() override;
 
         /**
         * @brief 

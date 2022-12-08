@@ -24,25 +24,25 @@ class Usuario {
 		 * @brief 
 		 * @details
 		 */
-			std::string nome;
+		std::string nome;
 
 		/**
 		 * @brief 
 		 * @details
 		 */
-			std::string senha;
+		std::string senha;
 
 		/**
 		 * @brief 
 		 * @details
 		 */
-			std::string email;
+		std::string email;
 
 		/**
 		 * @brief 
 		 * @details
 		 */
-			std::string telefone;
+		std::string telefone;
 
 	public:
 
@@ -60,28 +60,28 @@ class Usuario {
 		 * @details
 		 * @return std::string 
 		 */
-			std::string getNome();
+		std::string getNome();
 
 		/**
 		 * @brief Get the Senha object
 		 * @details
 		 * @return std::string 
 		 */
-			std::string getSenha();
+		std::string getSenha();
 
 		/**
 		 * @brief Get the Email object
 		 * @details
 		 * @return std::string 
 		 */
-			std::string getEmail();
+		std::string getEmail();
 
 		/**
 		 * @brief Get the Telefone object
 		 * @details
 		 * @return std::string 
 		 */
-			std::string getTelefone();
+		std::string getTelefone();
 			
 		/**
 		 * @brief 
@@ -89,6 +89,8 @@ class Usuario {
 		 * @return int 
 		 */
 		virtual bool exibeMenu() = 0;
+
+		virtual void verPerfil() = 0;
 
 };
 

@@ -10,6 +10,8 @@ Usuario::Usuario(std::string _nome, std::string _senha, std::string _email, std:
 
 bool Usuario::exibeMenu() {};
 
+void Usuario::verPerfil() {};
+
 std::string Usuario::getNome() {
 	return nome;
 }

@@ -25,90 +25,99 @@
 class Bibliotecario : public Usuario {
 	public:
 
-	/**
-	 * @brief Construtor da classe bibliotecário,
-	 * @details Constrói um novo objeto Bibliotecario recebendo o nome, senha, email e telefone.
-	 * @param _nome
-	 * @param _senha
-	 * @param _email
-	 * @param _telefone
-	 */
+		/**
+		* @brief Construtor da classe bibliotecário,
+		* @details Constrói um novo objeto Bibliotecario recebendo o nome, senha, email e telefone.
+		* @param _nome
+		* @param _senha
+		* @param _email
+		* @param _telefone
+		*/
 		Bibliotecario(std::string _nome, std::string _senha, std::string _email, std::string _telefone);
 
-	/**
-	 * @brief 
-	 * @details
-	 */
-		void verPerfil();
+		/**
+		 * @brief Funçãoe que imprime o perfil do usuário,
+		 * @details Sobrescrita da função verPerfil() herdada de usuário, por meio da qual o perfil do Bibliotecário é exibido, contendo uma saudação, nome, telefone e email do bibliotecário.
+		 */
+		virtual void verPerfil() override;
 
-	/**
-	 * @brief  Função que realiza o empréstimo de livros,
-	 * @details Realiza as ações necessárias para emprestar um livro para um Cliente.
-	 * @param cliente
-	 * @param livro
-	 */
+		/**
+		 * @brief  Função que realiza o empréstimo de livros,
+		 * @details Empresta um livro para um Cliente, recebendo um ponteiro para o cliente, de modo a regitrar nesse objeto a alocação do livro.
+		 * @param cliente
+		 * @param livro
+		 */
 		void emprestarLivro(Cliente *cliente, std::string livro);
 
-	/**
-	 * @brief Função que realiza o cadastro de livros,
-	 * @details Cadastra um novo livro no banco de dados. Recebe como parâmetro o Bibliotecário que fará o cadastro.
-	 * @param b
-	 */
+		/**
+		 * @brief Função que realiza o cadastro de livros,
+		 * @details Cadastra um novo livro, recebendo seu id, nome, autor e assunto .
+		 * @param id
+		 * @param nome
+		 * @param autor
+		 * @param assunto
+		 */
 		void cadastrarLivro(int id, std::string nome, std::string autor, std::string assunto);
 
-	/**
-	 * @brief Função que cadastra prateleiras,
-	 * @details Cadastra uma nova prateleira no banco de dados. Recebe como parâmetro o Bibliotecário que fará o cadastro.
-	 * @param b
-	 */
+		/**
+		 * @brief Função que cadastra prateleiras,
+		 * @details Cadastra uma nova prateleira, recebendo seu id, o id da estante correspondente e o assunto dessa prateleira.
+		 * @param id
+		 * @param idEstante
+		 * @param assunto
+		 */
 		void cadastrarPrateleira(int id, int idEstante, std::string assunto);
 
-	/**
-	 * @brief Função que cadastra uma nova estante,
-	 * @details Cadastra uma nova estante no banco de dados utilizado.
-	 */
+		/**
+		 * @brief Função que cadastra uma nova estante,
+		 * @details Cadastra uma nova estante, recebendo seu id e assunto.
+		 * @param id
+		 * @param assunto
+		 */
 		void cadastrarEstante(int id, std::string assunto);
 
-	/**
-	 * @brief Função que cadastra um novo cliente,
-	 * @details Cadastra um novo cliente no banco de dados utilizado.
-	 */
+		/**
+		 * @brief Função que cadastra um novo cliente,
+		 * @details Cadastra um novo cliente, recebendo seu nome, senha, email e telefone.
+		 * @param _nome
+		 * @param _senha
+		 * @param _email
+		 * @param _telefone
+		 */
 		void cadastrarCliente(std::string _nome, std::string _senha, std::string _email, std::string _telefone);
 
-	/**
-	 * @brief 
-	 * @details
-	 * @param nome 
-	 */
+		/**
+		 * @brief 
+		 * @details
+		 * @param nome 
+		 */
 		void pesquisarLivroNome(std::string nome);
 
-	/**
-	 * @brief 
-	 * @details
-	 * @param autor 
-	 */
+		/**
+		 * @brief 
+		 * @details
+		 * @param autor 
+		 */
 		void pesquisarLivroAutor(std::string autor);
 
-	/**
-	 * @brief 
-	 * @details
-	 * @param assunto 
-	 */
+		/**
+		 * @brief 
+		 * @details
+		 * @param assunto 
+		 */
 		void pesquisarLivroAssunto(std::string assunto);
 
-	/**
-	 * @brief  Função que exibe o menu do bibliotecário,
-	 * @details Reescrita do método exibeMenu() do Usuario para exibir o menu do Bibliotecário.
-	 * 			Retorna qual opção do menu foi selecionada.
-	 * @return int
-	 */
+		/**
+		 * @brief  Função que exibe o menu do bibliotecário,
+		 * @details Reescrita do método exibeMenu() do Usuario para exibir o menu do Bibliotecário. Retorna qual opção do menu foi selecionada.
+		 * @return bool
+		 */
 		virtual bool exibeMenu() override;
 
-	/**
-	 * @brief Destrói o objeto Bibliotecário
-	 * @details Destrói a classe Bibliotecário instanciada.
-	 *
-	 */
+		/**
+		 * @brief Destrói o objeto Bibliotecário
+		 * @details Destrói a classe Bibliotecário instanciada.
+		 */
 		~Bibliotecario();
 };
 
