@@ -10,7 +10,9 @@
  * @brief Armazena as caracteristicas do Cliente
  * @version 1.0
  * @date 07-12-2022
- * @details 
+ * @details  O Cliente é o "usuário comum" do sistema.
+ *           Ele pode realizar as pesquisas no sistema, como buscar um livro pelo nome ou autor,
+ *           fazer reservas de livros e administar suas multas por atraso.
  * @copyright GNU General Public License v2.0.
  */
 
@@ -45,26 +47,35 @@ class Cliente : public Usuario
      */
         Cliente(std::string nome, std::string senha, std::string email, std::string telefone);
 
-    //Algumas das funções que nem vamos usar eu deixei sem parâmetro, mas se precisarmos usar de alguma forma, só implementar;
+    // Funções que não serão implementadas;
 
     /**
      * @brief 
      * @details
      */
-        void reservarLivro();
+        void reservarLivro(Livro *livro);
 
     /**
      * @brief 
      * @details
+     * @param livro 
      */
-        void renovarLivro();
+        void renovarReservar(Livro *livro);
 
     /**
      * @brief 
      * @details
      * @return * void 
      */
-        void pagarMulta();
+        void pagarMulta(double multa);
+
+    /**
+     * @brief 
+     * @details
+     * @param livro 
+     * @return std::list<Cliente> 
+     */
+        std::list<Cliente> pesquisarReserva(Livro livro);
 
     /**
      * @brief Get the Id Cliente object
@@ -93,13 +104,14 @@ class Cliente : public Usuario
      * @param LogarComoUsuario 
      */
         void setLogarComoAdmin(bool LogarComoUsuario);
+        //void setTipoUsuario(bool tipoUsuario);
 
     /**
      * @brief Set the Multa object
      * @details
      * @return * void 
      */
-        void setMulta();
+        void setMulta(double multa);
 
     /**
      * @brief 
