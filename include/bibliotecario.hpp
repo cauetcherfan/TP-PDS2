@@ -5,35 +5,35 @@
 #include "cliente.hpp"
 #include "usuario.hpp"
 
-	/**
-	 * @file bibliotecario.hpp
-	 * @author Matheus 
-	 * @brief Armazena as caracteristicas do Bibliotecário
-	 * @version 2.0
-	 * @date 07-12-2022
-	 * @details O Bibliotecario é o administrador do sistema.
-	 * Ele pode realizar todas as pesquisas que Cliente faz,
-	 * porém, o Bibliotecário pode cadastrar itens no sistema,
-	 * como por exemplo, livros e outros Clientes,
-	 * @copyright GNU General Public License v2.0.
-	 */
+/**
+* @file bibliotecario.hpp
+* @author Matheus 
+* @brief Armazena as caracteristicas do Bibliotecário
+* @version 2.0
+* @date 07-12-2022
+* @details O Bibliotecario é o administrador do sistema.
+* Ele pode realizar todas as pesquisas que Cliente faz,
+* porém, o Bibliotecário pode cadastrar itens no sistema,
+* como por exemplo, livros e outros Clientes,
+* @copyright GNU General Public License v2.0.
+*/
 
-	/**
-	 * @brief Classe Bibliotecario,
-	 * @details Atributos e métodos de Bibliotecário.
-	 */
-		class Bibliotecario : public Usuario {
-			public:
+/**
+* @brief Classe Bibliotecario,
+* @details Atributos e métodos de Bibliotecário.
+*/
+class Bibliotecario : public Usuario {
+	public:
 
 	/**
 	 * @brief Construtor da classe bibliotecário,
 	 * @details Constrói um novo objeto Bibliotecario recebendo o nome, senha, email e telefone.
-	 * @param nome
-	 * @param senha
-	 * @param email
-	 * @param telefone
+	 * @param _nome
+	 * @param _senha
+	 * @param _email
+	 * @param _telefone
 	 */
-		Bibliotecario(std::string nome, std::string senha, std::string email, std::string telefone);
+		Bibliotecario(std::string _nome, std::string _senha, std::string _email, std::string _telefone);
 
 	/**
 	 * @brief 
@@ -47,7 +47,7 @@
 	 * @param cliente
 	 * @param livro
 	 */
-		void emprestarLivro(Cliente *cliente, Livro *livro);
+		void emprestarLivro(Cliente *cliente, std::string livro);
 
 	/**
 	 * @brief Função que realiza o cadastro de livros,
@@ -73,7 +73,7 @@
 	 * @brief Função que cadastra um novo cliente,
 	 * @details Cadastra um novo cliente no banco de dados utilizado.
 	 */
-		void cadastrarCliente(std::string nome, std::string senha, std::string email, std::string telefone);
+		void cadastrarCliente(std::string _nome, std::string _senha, std::string _email, std::string _telefone);
 
 	/**
 	 * @brief 
@@ -102,14 +102,14 @@
 	 * 			Retorna qual opção do menu foi selecionada.
 	 * @return int
 	 */
-	virtual bool exibeMenu() override;
+		virtual bool exibeMenu() override;
 
 	/**
 	 * @brief Destrói o objeto Bibliotecário
 	 * @details Destrói a classe Bibliotecário instanciada.
 	 *
 	 */
-	~Bibliotecario();
+		~Bibliotecario();
 };
 
 #endif

@@ -1,6 +1,6 @@
 #ifndef USUARIO_H
 #define USUARIO_H
-#include <list>
+
 #include <string>
 
 /**
@@ -24,70 +24,64 @@ class Usuario {
 		 * @brief 
 		 * @details
 		 */
-			int _id;
+			std::string nome;
 
 		/**
 		 * @brief 
 		 * @details
 		 */
-			std::string _nome;
+			std::string senha;
 
 		/**
 		 * @brief 
 		 * @details
 		 */
-			std::string _senha;
+			std::string email;
 
 		/**
 		 * @brief 
 		 * @details
 		 */
-			std::string _email;
-
-		/**
-		 * @brief 
-		 * @details
-		 */
-			std::string _telefone;
+			std::string telefone;
 
 	public:
 
 		/**
 		 * @brief Construct a new Usuario object
 		 * @details
-		 * @param nome 
-		 * @param email 
-		 * @param telefone 
+		 * @param _nome 
+		 * @param _email 
+		 * @param _telefone 
 		 */
-		Usuario(std::string nome, std::string senha, std::string email, std::string telefone);
+		Usuario(std::string _nome, std::string _senha, std::string _email, std::string _telefone);
 
 		/**
 		 * @brief Set the Nome object
 		 * @details
-		 * @param nome 
+		 * @param _nome 
 		 */
-			void setNome(std::string nome);
+			void setNome(std::string _nome);
 
 		/**
 		 * @brief Set the Senha object
 		 * @details
-		 * @param senha 
+		 * @param _senha 
 		 */
-			void setSenha(std::string senha);
+			void setSenha(std::string _senha);
 
 		/**
 		 * @brief Set the Email object
 		 * @details
-		 * @param email 
+		 * @param _email 
 		 */
-			void setEmail(std::string email);
+			void setEmail(std::string _email);
 
 		/**
 		 * @brief Set the Telefone object
 		 * @details
-		 * @param telefone 
+		 * @param _telefone 
 		 */
-			void setTelefone(std::string telefone);
+			void setTelefone(std::string _telefone);
 
 		/**
 		 * @brief Get the Nome object
@@ -122,6 +116,6 @@ class Usuario {
 		 * @details
 		 * @return int 
 		 */
-		virtual int exibeMenu() const;
+		virtual bool exibeMenu() = 0;
 
 };

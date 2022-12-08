@@ -3,8 +3,8 @@
 #include <iostream>
 #include <string>
 
-Cliente::Cliente(std::string n, std::string s, std::string e, std::string t):
-    Usuario(n, s, e, t) {}
+Cliente::Cliente(std::string _nome, std::string _senha, std::string _email, std::string _telefone):
+    Usuario(_nome, _senha, _email, _telefone) {}
 
 Cliente::~Cliente(){}
 
@@ -54,8 +54,8 @@ void Cliente::verPerfil(){
 
 //funções vazias
 
-    void Cliente::reservarLivro(){}
+void Cliente::reservarLivro(){}
 
-    void Cliente::renovarLivro(){}
+void Cliente::renovarLivro(){}
 
-    void Cliente::pagarMulta(){}
+void Cliente::pagarMulta(){}

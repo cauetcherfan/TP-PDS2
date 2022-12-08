@@ -1,51 +1,43 @@
-#include <list>
 #include <string>
 #include "usuario.hpp"
 
-Usuario::Usuario(){};
-
-Usuario::Usuario(std::string nome, std::string email, std::string telefone) {
-	_nome = nome;
-	_email = email;
-	_telefone = telefone;
+Usuario::Usuario(std::string _nome, std::string _senha, std::string _email, std::string _telefone) {
+	nome = _nome;
+	senha = _senha;
+	email = _email;
+	telefone = _telefone;
 }
 
-int Usuario::exibeMenu() const {
-	return -1;
-}
-
-
+bool Usuario::exibeMenu() {};
 
 std::string Usuario::getNome() {
-	
-	return _nome;
+	return nome;
 }
 
 std::string Usuario::getSenha() {
-	return _senha;
+	return senha;
 }
 
 std::string Usuario::getEmail() {
-	return _email;
+	return email;
 }
 
 std::string Usuario::getTelefone() {
-	return _telefone;
-
+	return telefone;
 }
 
-void Usuario::setNome(std::string nome) {
-	_nome = nome;
+void Usuario::setNome(std::string _nome) {
+	nome = _nome;
 }
 
-void Usuario::setSenha(std::string senha) {
-	_senha = senha;
+void Usuario::setSenha(std::string _senha) {
+	senha = _senha;
 }
 
-void Usuario::setEmail(std::string email) {
-	_email = email;
+void Usuario::setEmail(std::string _email) {
+	email = _email;
 }
 
-void Usuario::setTelefone(std::string telefone) {
-	_telefone = telefone;
+void Usuario::setTelefone(std::string _telefone) {
+	telefone = _telefone;
 }

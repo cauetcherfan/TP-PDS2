@@ -4,8 +4,8 @@
 #include "cliente.hpp"
 #include "usuario.hpp"
 
-Bibliotecario::Bibliotecario(std::string n, std::string s, std::string e, std::string t):
-    Usuario(n, s, e, t) {}
+Bibliotecario::Bibliotecario(std::string _nome, std::string _senha, std::string _email, std::string _telefone):
+    Usuario(_nome, _senha, _email, _telefone) {}
 
 Bibliotecario::~Bibliotecario(){}
 
@@ -56,13 +56,13 @@ void Bibliotecario::verPerfil(){
 
 //funções vazias
 
-void Bibliotecario::pesquisarLivroNome(std::string nome){}
+void Bibliotecario::pesquisarLivroNome(std::string _nome){}
 
 void Bibliotecario::pesquisarLivroAutor(std::string autor){}
 
 void Bibliotecario::pesquisarLivroAssunto(std::string assunto){}
 
-void Bibliotecario::emprestarLivro(Cliente *cliente, Livro *livro){}
+void Bibliotecario::emprestarLivro(Cliente *cliente, std::string livro){}
 
 void Bibliotecario::cadastrarLivro(int id, std::string nome, std::string autor, std::string assunto){}
 
@@ -70,4 +70,4 @@ void Bibliotecario::cadastrarPrateleira(int id, int idEstante, std::string assun
 
 void Bibliotecario::cadastrarEstante(int id, std::string assunto){}
 
-void Bibliotecario::cadastrarCliente(std::string nome, std::string senha, std::string email, std::string telefone){}
+void Bibliotecario::cadastrarCliente(std::string _nome, std::string _senha, std::string _email, std::string _telefone){}
