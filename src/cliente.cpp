@@ -3,7 +3,7 @@
 #include <string>
 
 Cliente::Cliente(std::string n, std::string s, std::string e, std::string t):
-    nome(n), senha(s), email(e), telefone(t) {}
+    Usuario(n, s, e, t) {}
 
 ~Cliente(){}
 
@@ -28,14 +28,18 @@ bool Cliente::exibeMenu() override{
 		std::cout<<std::endl<<menu<<std::endl;
 		std::cout<<"Digite a opção desejada"<<std::endl;
 		std::cin>>op;
-		if(op == 9){
-			return false;
-		}else if(op == 10){
+		if(op == 8){
+			verPerfil();
+		}else if(op == 9){
 			login = false;
-		}else{
+		}else if(op == 10){
+            return false;
+        }else{
 			continue;
 		}
 	}while(login);
+
+    return false;
 }
 
 void verPerfil(){
@@ -54,5 +58,3 @@ void verPerfil(){
     void Cliente::renovarLivro(){}
 
     void Cliente::pagarMulta(){}
-
-    

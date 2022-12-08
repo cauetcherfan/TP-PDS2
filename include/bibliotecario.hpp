@@ -1,7 +1,8 @@
 #ifndef BIBLIOTECARIO_H
 #define BIBLIOTECARIO_H
 
-#include "usuarios.hpp"
+#include <string>
+#include "usuario.hpp"
 
 /**
  * @file bibliotecario.hpp

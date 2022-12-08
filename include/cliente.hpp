@@ -2,12 +2,7 @@
 #define CLIENTE_H
 
 #include "usuario.hpp"
-
-#include <iostream>
-#include <list>
 #include <string>
-
-using namespace std;
 
 /**
  * @file cliente.hpp
@@ -23,7 +18,7 @@ using namespace std;
  * @brief 
  * 
  */
-Class Cliente : public Usuario
+class Cliente : public Usuario
 {
     private:
 
@@ -48,7 +43,7 @@ Class Cliente : public Usuario
      * @param email 
      * @param telefone 
      */
-        Cliente(string nome, string senha, string email, string telefone);
+        Cliente(std::string nome, std::string senha, std::string email, std::string telefone);
 
     //Algumas das funções que nem vamos usar eu deixei sem parâmetro, mas se precisarmos usar de alguma forma, só implementar;
 

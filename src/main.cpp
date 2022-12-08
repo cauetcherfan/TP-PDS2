@@ -11,34 +11,24 @@ int main (){
 
     std::string login, senha;
 
-    bool erroLogin = true;
+    bool reLogin = true;
 
-    bool rodar = true;
     do{
-        do{
-            std::cout<<"Seja bem vindo(a) à Biblioteca Central"<<std::endl;
-            std::cout<<"Digite o seu nome"<<std::endl;
-            std::cin>>login;
-            std::cout<<"Digite a sua senha"<<std::endl;
-            std::cin>>senha;
+        std::cout<<"Seja bem vindo(a) à Biblioteca Central"<<std::endl;
+        std::cout<<"Digite o seu nome"<<std::endl;
+        std::cin>>login;
+        std::cout<<"Digite a sua senha"<<std::endl;
+        std::cin>>senha;
 
-            if(login == "Matheus" && senha == "123"){
-                matt.verPerfil();
-                rodar = matt.exibirMenu();
-                erroLogin = false;
-            }
-            else if(login == "" && senha == ""){
-                
-                erroLogin = false;
-            }else{
-                std::cout<<std::endl<<"Login inválido! Tente novamente";
-            }
-        }while(erroLogin);
-    }while(rodar);
+        if(login == "Matheus" && senha == "123"){
+            matt.verPerfil();
+            reLogin = matt.exibirMenu();
+        }
+        else if(login == "" && senha == ""){
+            
+        }else{
+            std::cout<<std::endl<<"Login inválido! Tente novamente";
+        }
+    }while(reLogin);
 
-
-    // int rodando = 1;
-    // while(rodando){
-
-    // }
 }
