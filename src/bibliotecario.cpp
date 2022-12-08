@@ -1,6 +1,8 @@
-#include "bibliotecario.hpp"
 #include <iostream>
 #include <string>
+#include "bibliotecario.hpp"
+#include "cliente.hpp"
+#include "usuario.hpp"
 
 Bibliotecario::Bibliotecario(std::string n, std::string s, std::string e, std::string t):
     Usuario(n, s, e, t) {}

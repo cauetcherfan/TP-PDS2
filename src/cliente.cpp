@@ -1,4 +1,5 @@
 #include "cliente.hpp"
+#include "usuario.hpp"
 #include <iostream>
 #include <string>
 
