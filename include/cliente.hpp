@@ -39,28 +39,29 @@ class Cliente : public Usuario{
          * @brief 
          * @details
          */
-        void reservarLivro(std::string livro);
+        void reservarLivro(Cliente *cliente, std::string livro);
 
         /**
          * @brief 
          * @details
          * @param livro 
          */
-        void renovarReservar(Cliente *cliente, std::string livro);
+        void renovarReserva(Cliente *cliente, std::string livro);
 
         /**
          * @brief 
          * @details
          * @return * void 
          */
-        void pagarMulta(double multa);
+        void pagarMulta(int valor);
 
-        /**
-        * @brief Get the Multa object
-        * @details
-        * @return double 
-        */
-        double getMulta();
+        int conferirMulta(Cliente *cliente);
+
+        void pesquisarLivroNome(std::string _nome);
+
+        void pesquisarLivroAutor(std::string autor);
+
+        void pesquisarLivroAssunto(std::string assunto);
 
         /**
 	    * @brief 
@@ -71,9 +72,9 @@ class Cliente : public Usuario{
         /**
         * @brief 
         * @details
-        * @return int 
+        * @return bool
         */
-        virtual bool exibeMenu() const override;
+        virtual bool exibeMenu() override;
 
         /**
          * @brief Destroy the Cliente object

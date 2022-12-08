@@ -9,7 +9,7 @@ Bibliotecario::Bibliotecario(std::string _nome, std::string _senha, std::string 
 
 Bibliotecario::~Bibliotecario(){}
 
-bool Bibliotecario::exibeMenu() override{
+bool Bibliotecario::exibeMenu() {
 
 	bool login = true;
 	int op;

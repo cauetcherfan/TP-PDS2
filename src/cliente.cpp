@@ -8,7 +8,7 @@ Cliente::Cliente(std::string _nome, std::string _senha, std::string _email, std:
 
 Cliente::~Cliente(){}
 
-bool Cliente::exibeMenu() override{
+bool Cliente::exibeMenu() {
 
 	bool login = true;
 	int op;
@@ -17,8 +17,8 @@ bool Cliente::exibeMenu() override{
         "1 - Pesquisar livro pelo nome \n"
         "2 - Pesquisar livro pelo autor \n"
         "3 - Pesquisar livro pelo assunto \n"
-        "4 - Pesquisar reservas de livros \n"
-        "5 - Conferir lista de livros emprestados \n"
+        "4 - Reservar livro \n"
+        "5 - Renovar reserva \n"
         "6 - Conferir valor da multa \n"
         "7 - Pagar multa \n"
         "8 - Ver perfil \n"
@@ -54,8 +54,16 @@ void Cliente::verPerfil(){
 
 //funções vazias
 
-void Cliente::reservarLivro(){}
+void Cliente::pesquisarLivroNome(std::string _nome){}
 
-void Cliente::renovarLivro(){}
+void Cliente::pesquisarLivroAutor(std::string autor){}
 
-void Cliente::pagarMulta(){}
+void Cliente::pesquisarLivroAssunto(std::string assunto){}
+
+void Cliente::reservarLivro(Cliente *cliente, std::string livro){}
+
+void Cliente::renovarReserva(Cliente *cliente, std::string livro){}
+
+int Cliente::conferirMulta(Cliente *cliente){}
+
+void Cliente::pagarMulta(int valor){}

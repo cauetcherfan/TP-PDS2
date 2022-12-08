@@ -25,19 +25,3 @@ std::string Usuario::getEmail() {
 std::string Usuario::getTelefone() {
 	return telefone;
 }
-
-void Usuario::setNome(std::string _nome) {
-	nome = _nome;
-}
-
-void Usuario::setSenha(std::string _senha) {
-	senha = _senha;
-}
-
-void Usuario::setEmail(std::string _email) {
-	email = _email;
-}
-
-void Usuario::setTelefone(std::string _telefone) {
-	telefone = _telefone;
-}

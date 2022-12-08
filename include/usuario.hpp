@@ -56,34 +56,6 @@ class Usuario {
 		Usuario(std::string _nome, std::string _senha, std::string _email, std::string _telefone);
 
 		/**
-		 * @brief Set the Nome object
-		 * @details
-		 * @param _nome 
-		 */
-			void setNome(std::string _nome);
-
-		/**
-		 * @brief Set the Senha object
-		 * @details
-		 * @param _senha 
-		 */
-			void setSenha(std::string _senha);
-
-		/**
-		 * @brief Set the Email object
-		 * @details
-		 * @param _email 
-		 */
-			void setEmail(std::string _email);
-
-		/**
-		 * @brief Set the Telefone object
-		 * @details
-		 * @param _telefone 
-		 */
-			void setTelefone(std::string _telefone);
-
-		/**
 		 * @brief Get the Nome object
 		 * @details
 		 * @return std::string 
@@ -119,3 +91,5 @@ class Usuario {
 		virtual bool exibeMenu() = 0;
 
 };
+
+#endif
