@@ -1,6 +1,5 @@
 #ifndef USUARIO_H
 #define USUARIO_H
-
 #include <list>
 #include <string>
 
@@ -25,25 +24,36 @@ class Usuario {
 		 * @brief 
 		 * 
 		 */
-			std::string nome;
+			int _id;
+		/**
+		 * @brief 
+		 * 
+		 */
+			std::string _nome;
 
 		/**
 		 * @brief 
 		 * 
 		 */
-			std::string senha;
+			std::string _senha;
 
 		/**
 		 * @brief 
 		 * 
 		 */
-			std::string email;
+			std::string _email;
 
 		/**
 		 * @brief 
 		 * 
 		 */
-			std::string telefone;
+			std::string _telefone;
+		/**
+		 * @brief 
+		 * 
+		 */
+			
+			bool _LogarComoAdmin;
 
 	public:
 
@@ -80,13 +90,12 @@ class Usuario {
 		 */
 			std::list<Livro> pesquisarLivroPorAssunto(std::string assunto);
 
+			
 		/**
-		 * @brief Set the Id object
-		 * 
-		 * @param id 
+		 * @brief determina o acesso as funçoes de cadastro ao usuario que esta logando
+		 * @param LogarComoAdmin
 		 */
-			void setId(int id);
-
+		void setLogarComoAdmin(bool LogarComoAdmin);
 		/**
 		 * @brief Set the Nome object
 		 * 
@@ -115,12 +124,6 @@ class Usuario {
 		 */
 			void setTelefone(std::string telefone);
 
-		/**
-		 * @brief Get the Id object
-		 * 
-		 * @return int 
-		 */
-			int getId();
 
 		/**
 		 * @brief Get the Nome object
@@ -142,6 +145,16 @@ class Usuario {
 		 * @return std::string 
 		 */
 			std::string getEmail();
+		/**
+		 * @brief Retorna a permissão ao acesso de funçoes exclusivas do bibliotecario
+		 * 			0 -> Cliente
+		 * 			1 -> Bibliotecario
+		 *
+		 * @return 0
+	 	* @return 1
+		 */
+		bool getLogarComoAdmin();
+	
 
 		/**
 		 * @brief Get the Telefone object
@@ -149,5 +162,7 @@ class Usuario {
 		 * @return std::string 
 		 */
 			std::string getTelefone();
+			
+		virtual int exibeMenu() const;
 
 };
