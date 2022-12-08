@@ -6,7 +6,7 @@
 Cliente::Cliente(std::string n, std::string s, std::string e, std::string t):
     Usuario(n, s, e, t) {}
 
-~Cliente(){}
+Cliente::~Cliente(){}
 
 bool Cliente::exibeMenu() override{
 
@@ -43,7 +43,7 @@ bool Cliente::exibeMenu() override{
     return false;
 }
 
-void verPerfil(){
+void Cliente::verPerfil(){
     std::string presentation = "";
     presentation += "Olá! Eu sou o cliente " + nome;
     std::cout<<presentation<<std::endl;

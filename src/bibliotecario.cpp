@@ -7,7 +7,7 @@
 Bibliotecario::Bibliotecario(std::string n, std::string s, std::string e, std::string t):
     Usuario(n, s, e, t) {}
 
-~Bibliotecario(){}
+Bibliotecario::~Bibliotecario(){}
 
 bool Bibliotecario::exibeMenu() override{
 
@@ -45,7 +45,7 @@ bool Bibliotecario::exibeMenu() override{
 	return true;
 }
 
-void verPerfil(){
+void Bibliotecario::verPerfil(){
     std::string presentation = "";
     presentation += "Olá! Eu sou o/a bibliotecário(a) " + nome;
     std::cout<<presentation<<std::endl;
@@ -70,4 +70,4 @@ void Bibliotecario::cadastrarPrateleira(int id, int idEstante, std::string assun
 
 void Bibliotecario::cadastrarEstante(int id, std::string assunto){}
 
-void Bibliotecario::cadastrarCliente(string nome, string senha, string email, string telefone){}
+void Bibliotecario::cadastrarCliente(std::string nome, std::string senha, std::string email, std::string telefone){}
