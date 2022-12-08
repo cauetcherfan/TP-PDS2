@@ -16,7 +16,7 @@
 
 /**
  * @brief 
- * 
+ * @details
  */
 class Cliente : public Usuario
 {
@@ -24,13 +24,13 @@ class Cliente : public Usuario
 
     /**
      * @brief 
-     * 
+     * @details
      */
         list <Livro *> _livrosEmprestados;
 
     /**
      * @brief 
-     * 
+     * @details
      */
         double _multa;
     
@@ -38,7 +38,7 @@ class Cliente : public Usuario
 
     /**
      * @brief Construct a new Cliente object
-     * 
+     * @details
      * @param nome 
      * @param email 
      * @param telefone 
@@ -49,70 +49,70 @@ class Cliente : public Usuario
 
     /**
      * @brief 
-     * 
+     * @details
      */
         void reservarLivro();
 
     /**
      * @brief 
-     * 
+     * @details
      */
         void renovarLivro();
 
     /**
      * @brief 
-     * 
+     * @details
      * @return * void 
      */
         void pagarMulta();
 
     /**
      * @brief Get the Id Cliente object
-     * 
+     * @details
      * @return int 
      */
         int getIdCliente();
 
     /**
      * @brief Get the Livros Emprestados object
-     * 
+     * @details
      * @return list<Livro *> 
      */
         list<Livro *> getLivrosEmprestados();
 
     /**
      * @brief Get the Multa object
-     * 
+     * @details
      * @return double 
      */
         double getMulta();
 
     /**
      * @brief Set the Logar Como Admin object
-     * 
+     * @details
      * @param LogarComoUsuario 
      */
         void setLogarComoAdmin(bool LogarComoUsuario);
 
     /**
      * @brief Set the Multa object
-     * 
+     * @details
      * @return * void 
      */
         void setMulta();
 
     /**
      * @brief 
-     * 
+     * @details
      * @return int 
      */
         virtual bool exibeMenu() const override;
 
     /**
      * @brief Destroy the Cliente object
-     * 
+     * @details
      */
-    ~Cliente();
+        ~Cliente();
 };
 
 #endif
