@@ -8,7 +8,7 @@ Usuario::Usuario(std::string _nome, std::string _senha, std::string _email, std:
 	telefone = _telefone;
 }
 
-bool Usuario::exibeMenu() {};
+bool Usuario::exibeMenu() {return true;};
 
 void Usuario::verPerfil() {};
 

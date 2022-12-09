@@ -9,11 +9,11 @@ LIBSDIR := -L/usr/local/lib -L/usr/lib/x86_64-linux-gnu/
 all: clean main
 	$(CC) $(FLAGS) $(BUILDDIR)/*.o -o $(TARGET) $(LIBSDIR) $(LFLAGS)
 
-main: usuarios cliente bibliotecario
+main: usuario cliente bibliotecario
 	$(CC) $(FLAGS) -c $(SRCDIR)/main.cpp -o $(BUILDDIR)/main.o
 
-usuarios:
-	$(CC) $(FLAGS) -c $(SRCDIR)/usuarios.cpp -o $(BUILDDIR)/usuarios.o
+usuario:
+	$(CC) $(FLAGS) -c $(SRCDIR)/usuario.cpp -o $(BUILDDIR)/usuario.o
 
 cliente:
 	$(CC) $(FLAGS) -c $(SRCDIR)/cliente.cpp -o $(BUILDDIR)/cliente.o

@@ -7,9 +7,9 @@
 
 int main (){
 
-    Bibliotecario::Bibliotecario matt("Matheus", "123", "matheus@email.com", "1234-5678");
+    Bibliotecario matt("Matheus", "123", "matheus@email.com", "1234-5678");
 
-    Cliente::Cliente c("Cauet", "321", "cauetcherfan@yahoo.com", "(16) 98848-6818");
+    Cliente c("Cauet", "321", "cauetcherfan@yahoo.com", "(16) 98848-6818");
 
     std::string login, senha;
 
@@ -24,20 +24,19 @@ int main (){
 
         if(login == "Matheus" && senha == "123"){
             matt.verPerfil();
-            reLogin = matt.exibirMenu();
+            reLogin = matt.exibeMenu();
         }
 
-        if(login == "Cauet" && senha == "321")
+        else if(login == "Cauet" && senha == "321")
         {
             c.verPerfil();
-            reLogin = c.exibirMenu();
+            reLogin = c.exibeMenu();
         }
-
-        else if(login == "" && senha == ""){
-            
-        }else{
-            std::cout<<std::endl<<"Login inválido! Tente novamente";
+    
+        else{
+            std::cout<<std::endl<<"Login inválido! Tente novamente"<< std::endl;
         }
     }while(reLogin);
 
+    return 0;
 }

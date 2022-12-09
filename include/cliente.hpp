@@ -55,7 +55,7 @@ class Cliente : public Usuario{
          */
         void pagarMulta(int valor);
 
-        int conferirMulta(Cliente *cliente);
+        void conferirMulta(Cliente *cliente);
 
         void pesquisarLivroNome(std::string _nome);
 

@@ -64,6 +64,6 @@ void Cliente::reservarLivro(Cliente *cliente, std::string livro){}
 
 void Cliente::renovarReserva(Cliente *cliente, std::string livro){}
 
-int Cliente::conferirMulta(Cliente *cliente){}
+void Cliente::conferirMulta(Cliente *cliente){}
 
 void Cliente::pagarMulta(int valor){}
