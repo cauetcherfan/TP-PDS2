@@ -12,15 +12,14 @@
 * @version 2.0
 * @date 07-12-2022
 * @details O Bibliotecario é o administrador do sistema.
-* Ele pode realizar todas as pesquisas que Cliente faz,
-* porém, o Bibliotecário pode cadastrar itens no sistema,
-* como por exemplo, livros e outros Clientes,
+* É ele quem cadastra clientes, livros, prateleiras e estantes.
+* Além disso, ele pode emprestar um livro para um Cliente e fazer pesquisas de livros (pelo nome da obra, autor ou assunto)
 * @copyright GNU General Public License v2.0.
 */
 
 /**
 * @brief Classe Bibliotecario,
-* @details Atributos e métodos de Bibliotecário.
+* @details Contém os métodos de Bibliotecário.
 */
 class Bibliotecario : public Usuario {
 	public:
@@ -109,7 +108,7 @@ class Bibliotecario : public Usuario {
 
 		/**
 		 * @brief  Função que imprime o menu do bibliotecário,
-		 * @details Reescrita do método exibeMenu() do Usuario para exibir o menu do Bibliotecário. Retorna qual opção do menu foi selecionada.
+		 * @details Sobrescrita da função exibeMenu() herdada de Usuario, por meio da qual o menu do Bibliotecario é exibido, contendo as diversas operações possíveis (nem todas funcionais). 
 		 * @return bool
 		 */
 		virtual bool exibeMenu() override;
