@@ -9,7 +9,7 @@
  * @brief Armazena as caracteristicas do Usuário
  * @version 2.0
  * @date 07-12-2022
- * @details Um Usuário pode ser do tipo Cliente ou Bibliotecário. as funções exibemenu e  verperfil são compartilhadas e adequada a cada tipo de usuario.
+ * @details Um Usuário pode ser do tipo Cliente ou Bibliotecário. as funções exibeMenu() e verPerfil() são compartilhadas e adequada a cada tipo de usuario.
  * @copyright GNU General Public License v2.0.
  */
 
@@ -21,8 +21,8 @@ class Usuario {
 	protected:
 
 		/**
-	 	* @brief Nome do Usuário,
-	 	* @details Atributo com o nome do Usuário.
+		* @brief Nome do Usuário,
+		* @details Atributo com o nome do Usuário.
 		 */
 		std::string nome;
 
@@ -75,20 +75,21 @@ class Usuario {
 		 * @return std::string
 		 */
 		std::string getEmail();
+
 		/**
 		 * @brief Retorna o telefone do usuario,
 		 * @details Função que retorna o telefone do respectivo Usuario.
 		 * @return std::string
-		 *//
+		 */
 		std::string getTelefone();
 			
-		
 		/**
 		 * @brief  Função que imprime o menu do usuario,
 		 * @details função puramente virtual do Usuario que sera Sobrescrita para exibir o menu do Bibliotecário ou cliente cada um com suas especificações das classes filhas. Retorna qual opção do menu foi selecionada.
 		 * @return bool
 		 */
 		virtual bool exibeMenu() = 0;
+
 		/**
 		 * @brief Função que imprime o perfil do usuario,
 		 * @details função puramente virtual do Usuario que sera Sobrescrita pelas classes filhas, por meio da qual o perfil do usuario é exibido, contendo uma saudação, nome, telefone e email do usuario instanciado.

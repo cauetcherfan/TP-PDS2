@@ -42,7 +42,7 @@ class Bibliotecario : public Usuario {
 
 		/**
 		 * @brief  Função que realiza o empréstimo de livros,
-		 * @details Empresta um livro para um Cliente, recebendo um ponteiro para o cliente, de modo a regitrar nesse objeto a alocação do livro.
+		 * @details Empresta um livro para um Cliente, recebendo um ponteiro para o cliente, de modo a registrar nesse objeto a alocação do livro.
 		 * @param cliente
 		 * @param livro
 		 */
