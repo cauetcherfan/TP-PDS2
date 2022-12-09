@@ -26,7 +26,7 @@ class Bibliotecario : public Usuario {
 	public:
 
 		/**
-		* @brief Construtor da classe bibliotecário,
+		* @brief Construtor da classe Bibliotecario,
 		* @details Constrói um novo objeto Bibliotecario recebendo o nome, senha, email e telefone.
 		* @param _nome
 		* @param _senha
@@ -36,8 +36,8 @@ class Bibliotecario : public Usuario {
 		Bibliotecario(std::string _nome, std::string _senha, std::string _email, std::string _telefone);
 
 		/**
-		 * @brief Funçãoe que imprime o perfil do usuário,
-		 * @details Sobrescrita da função verPerfil() herdada de usuário, por meio da qual o perfil do Bibliotecário é exibido, contendo uma saudação, nome, telefone e email do bibliotecário.
+		 * @brief Função que imprime o perfil do Bibliotecario,
+		 * @details Sobrescrita da função verPerfil() herdada de Usuario, por meio da qual o perfil do Bibliotecario é exibido, contendo uma saudação, nome, telefone e email do Bibliotecario instanciado.
 		 */
 		virtual void verPerfil() override;
 
@@ -87,36 +87,36 @@ class Bibliotecario : public Usuario {
 		void cadastrarCliente(std::string _nome, std::string _senha, std::string _email, std::string _telefone);
 
 		/**
-		 * @brief 
-		 * @details
+		 * @brief Função que pesquisa um livro pelo nome,
+		 * @details Pesquisa um livro pelo nome que é recebido como parâmetro.
 		 * @param nome 
 		 */
 		void pesquisarLivroNome(std::string nome);
 
 		/**
-		 * @brief 
-		 * @details
+		 * @brief Função que pesquisa um livro pelo autor,
+		 * @details Pesquisa um livro pelo nome do autor que é recebido como parâmetro.
 		 * @param autor 
 		 */
 		void pesquisarLivroAutor(std::string autor);
 
 		/**
-		 * @brief 
-		 * @details
+		 * @brief Função que pesquisa um livro pelo assunto,
+		 * @details Pesquisa um livro pelo assunto que é recebido como parâmetro.
 		 * @param assunto 
 		 */
 		void pesquisarLivroAssunto(std::string assunto);
 
 		/**
-		 * @brief  Função que exibe o menu do bibliotecário,
+		 * @brief  Função que imprime o menu do bibliotecário,
 		 * @details Reescrita do método exibeMenu() do Usuario para exibir o menu do Bibliotecário. Retorna qual opção do menu foi selecionada.
 		 * @return bool
 		 */
 		virtual bool exibeMenu() override;
 
 		/**
-		 * @brief Destrói o objeto Bibliotecário
-		 * @details Destrói a classe Bibliotecário instanciada.
+		 * @brief Destrutor da classe Bibliotecario
+		 * @details Destrói o objeto do tipo Bibliotecario instanciado.
 		 */
 		~Bibliotecario();
 };
