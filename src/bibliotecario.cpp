@@ -46,6 +46,7 @@ bool Bibliotecario::exibeMenu() {
 }
 
 void Bibliotecario::verPerfil(){
+	std::cout << std::endl;
     std::string presentation = "";
     presentation += "Olá! Eu sou o/a bibliotecário(a) " + nome;
     std::cout<<presentation<<std::endl;

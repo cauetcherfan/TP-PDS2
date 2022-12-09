@@ -44,6 +44,7 @@ bool Cliente::exibeMenu() {
 }
 
 void Cliente::verPerfil(){
+    std::cout << std::endl;
     std::string presentation = "";
     presentation += "Olá! Eu sou o cliente " + nome;
     std::cout<<presentation<<std::endl;
@@ -51,8 +52,6 @@ void Cliente::verPerfil(){
     std::cout<<"Meu email é "<< email<< std::endl;
     std::cout<<"Meu telefone é "<<telefone<<std::endl;
 }
-
-//funções vazias
 
 void Cliente::pesquisarLivroNome(std::string _nome){}
 

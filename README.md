@@ -12,3 +12,4 @@ O programa implementado visa demonstrar, na prática, conceitos aprendidos relac
     Como solicitado, o programa foi criado de maneira suscinta e objetiva, onde apenas algumas funções necessárias para o funcionamento básico foram implementadas, como por exemplo as funcionalidades "logoff" e "sair" que, quando acionadas, realizam o comportamento esperado.
 
     Para compilar o programa, basta o utilizar o comando make no terminal  e, para rodá-lo, basta digitar ./main.out
+    Uma vez compilado e pronto para ser executado, deve-se usar o nome "Matheus" e a senha "123" para logar como bibliotecário no sistema e, para logar como cliente, deve-se usar o nome "Cauet" e a respectiva senha "321", dessa forma você poderá visualizar e testar todas as funcionalidades implementadas no projeto.
