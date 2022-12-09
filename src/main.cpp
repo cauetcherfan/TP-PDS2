@@ -7,9 +7,11 @@
 
 int main (){
 
-    Bibliotecario matt("Matheus", "123", "matheus@email.com", "1234-5678");
+    Bibliotecario matt("Matheus", "123", "matt.salles@outlook.com", "(31) 99544-5804");
 
-    Cliente c("Cauet", "321", "cauetcherfan@yahoo.com", "(16) 98848-6818");
+    Cliente cauet("Cauet", "321", "cauetcherfan@yahoo.com", "(16) 98848-6818");
+
+    Cliente marcelle("Marcelle", "213", "marcelle@gmail.com", "(31) 99521-7763");
 
     std::string login, senha;
 
@@ -22,20 +24,29 @@ int main (){
         std::cout<<"Digite a sua senha"<<std::endl;
         std::cin>>senha;
 
-        if(login == "Matheus" && senha == "123"){
+        if(login == "Matheus" && senha == "123")
+        {
             matt.verPerfil();
             reLogin = matt.exibeMenu();
         }
 
         else if(login == "Cauet" && senha == "321")
         {
-            c.verPerfil();
-            reLogin = c.exibeMenu();
+            cauet.verPerfil();
+            reLogin = cauet.exibeMenu();
+        }
+
+        else if(login == "Marcelle" && senha == "213")
+        {
+            marcelle.verPerfil();
+            reLogin = marcelle.exibeMenu();
         }
     
-        else{
+        else
+        {
             std::cout<<std::endl<<"Login inválido! Tente novamente"<< std::endl;
         }
+
     }while(reLogin);
 
     return 0;

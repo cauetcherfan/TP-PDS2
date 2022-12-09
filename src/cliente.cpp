@@ -40,7 +40,7 @@ bool Cliente::exibeMenu() {
 		}
 	}while(login);
 
-    return false;
+    return true;
 }
 
 void Cliente::verPerfil(){
