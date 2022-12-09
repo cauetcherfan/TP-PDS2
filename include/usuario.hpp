@@ -7,89 +7,92 @@
  * @file usuarios.hpp
  * @author Marcelle
  * @brief Armazena as caracteristicas do Usuário
- * @version 1.0
+ * @version 2.0
  * @date 07-12-2022
- * @details 
+ * @details Um Usuário pode ser do tipo Cliente ou Bibliotecário. as funções exibemenu e  verperfil são compartilhadas e adequada a cada tipo de usuario.
  * @copyright GNU General Public License v2.0.
  */
 
 /**
- * @brief 
- * @details
+ * @brief Classe usuario,
+ * @details @details Atributos e métodos de usuario
  */
 class Usuario {
 	protected:
 
 		/**
-		 * @brief 
-		 * @details
+	 	* @brief Nome do Usuário,
+	 	* @details Atributo com o nome do Usuário.
 		 */
 		std::string nome;
 
 		/**
-		 * @brief 
-		 * @details
+		 * @brief Senha do Usuário,
+		 * @details Atributo com a senha do Usuário.
 		 */
 		std::string senha;
 
 		/**
-		 * @brief 
-		 * @details
-		 */
+		 * @brief Email do Usuário,
+		 * @details Atributo com o email do Usuário.
+	 	 */
 		std::string email;
 
 		/**
-		 * @brief 
-		 * @details
+		 * @brief Telefone do Usuário,
+	 	 * @details Atributo com o telefone do Usuário.
 		 */
 		std::string telefone;
 
 	public:
 
 		/**
-		 * @brief Construct a new Usuario object
-		 * @details
-		 * @param _nome 
-		 * @param _email 
-		 * @param _telefone 
+		 * @brief Construtor de Usuario,
+		 * @details Constrói um novo objeto Usuario recebendo como parâmetro o nome, senha, email e telefone.
+	 	 * @param nome
+	 	 * @param email
+		 * @param telefone
 		 */
 		Usuario(std::string _nome, std::string _senha, std::string _email, std::string _telefone);
 
 		/**
-		 * @brief Get the Nome object
-		 * @details
-		 * @return std::string 
+		 * @brief Retorna o nome do Usuario,
+	 	 * @details Função que retorna o nome do respectivo Usuario.
+		 * @return std::string
 		 */
 		std::string getNome();
 
 		/**
-		 * @brief Get the Senha object
-		 * @details
-		 * @return std::string 
+	   	 * @brief Retorna a senha do Usuario,
+		 * @details Função que retorna a senha do respectivo Usuario.
+		 * @return std::string
 		 */
 		std::string getSenha();
 
 		/**
-		 * @brief Get the Email object
-		 * @details
-		 * @return std::string 
+		 * @brief Retorna o email do usuario,
+		 * @details Função que retorna o email do respectivo Usuario.
+		 * @return std::string
 		 */
 		std::string getEmail();
-
 		/**
-		 * @brief Get the Telefone object
-		 * @details
-		 * @return std::string 
-		 */
+		 * @brief Retorna o telefone do usuario,
+		 * @details Função que retorna o telefone do respectivo Usuario.
+		 * @return std::string
+		 *//
 		std::string getTelefone();
 			
+		
 		/**
-		 * @brief 
-		 * @details
-		 * @return int 
+		 * @brief  Função que imprime o menu do usuario,
+		 * @details função puramente virtual do Usuario que sera Sobrescrita para exibir o menu do Bibliotecário ou cliente cada um com suas especificações das classes filhas. Retorna qual opção do menu foi selecionada.
+		 * @return bool
 		 */
 		virtual bool exibeMenu() = 0;
-
+		/**
+		 * @brief Função que imprime o perfil do usuario,
+		 * @details função puramente virtual do Usuario que sera Sobrescrita pelas classes filhas, por meio da qual o perfil do usuario é exibido, contendo uma saudação, nome, telefone e email do usuario instanciado.
+		 */
 		virtual void verPerfil() = 0;
 
 };
